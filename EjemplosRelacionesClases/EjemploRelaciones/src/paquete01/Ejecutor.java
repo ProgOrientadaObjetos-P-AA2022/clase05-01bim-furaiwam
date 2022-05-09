@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package paqueteuno;
+package paquete01;
 
 /**
  *
@@ -14,7 +14,8 @@ public class Ejecutor {
     public static void main(String[] args) {
         // se crea un de tipo UnidadDVD
         String marca = "Toshiba";
-        UnidadDVD unidad = new UnidadDVD(marca);
+        double costo=0;
+        UnidadDVD unidad = new UnidadDVD(marca,costo);
 
         // se crea el objeto de tipo Computadora
         String procesador = "Intel";
@@ -24,6 +25,14 @@ public class Ejecutor {
                 + "Unidad de DVD: %s\n",
                 computadora.obtenerTipoProcesador(),
                 computadora.obtenerUnidadDvd().obtenerMarca());
+
+        UnidadDVD unidad2 = new UnidadDVD("Sony",400);
+        computadora.establecerUnidadDvd(unidad2);
+        System.out.printf("Computadora:\nProcesador: %s\n"
+                        + "Unidad de DVD: %s\n",
+                computadora.obtenerTipoProcesador(),
+                computadora.obtenerUnidadDvd().obtenerMarca());
+
     }
 
 }
